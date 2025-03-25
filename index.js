@@ -1,6 +1,21 @@
 function hasTargetSum(array, target) {
   // Write your algorithm here
+  
 }
+function hasTargetSum(arr, target) {
+  let seenNumbers = new Set();
+
+  for (let num of arr) {
+    let difference = target - num;
+    if (seenNumbers.has(difference)) {
+      return true;
+    }
+    seenNumbers.add(num);
+  }
+
+  return false;
+}
+
 
 /* 
   Write the Big O time complexity of your function here
